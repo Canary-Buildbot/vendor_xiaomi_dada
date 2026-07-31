@@ -5,26 +5,6 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/dada
 
-# Fingerprint HAL modules
-PRODUCT_COPY_FILES += \
-    vendor/xiaomi/dada/proprietary/odm/lib64/hw/fingerprint.goodix_us.default.so:$(TARGET_COPY_OUT_ODM)/lib64/hw/fingerprint.goodix.so \
-    vendor/xiaomi/dada/proprietary/odm/lib64/hw/fingerprint.qcom_us.default.so:$(TARGET_COPY_OUT_ODM)/lib64/hw/fingerprint.qcom_us.so \
-    vendor/xiaomi/dada/proprietary/odm/lib64/libqc_hal.so:$(TARGET_COPY_OUT_ODM)/lib64/libqc_hal.so
-
-# Graphics allocator V1 (needed by camera HAL blobs)
-PRODUCT_COPY_FILES += \
-    vendor/xiaomi/dada/proprietary/vendor/lib64/android.hardware.graphics.allocator-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.allocator-V1-ndk.so
-
-# Stock libc++ for vendor (needed by camera HAL blobs)
-PRODUCT_COPY_FILES += \
-    vendor/xiaomi/dada/proprietary/vendor/lib64/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so
-
-# Product display config (auto brightness)
-PRODUCT_COPY_FILES += \
-    vendor/xiaomi/dada/proprietary/product/etc/displayconfig/display_id_4630946682710401939.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/display_id_4630946682710401939.xml \
-    vendor/xiaomi/dada/proprietary/product/etc/displayconfig/display_id_4630947212918452371.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/display_id_4630947212918452371.xml
-
-# ACDB and audio configs
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/dada/proprietary/odm/etc/acdbdata/Fluence/Fluence_acdb_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Fluence/Fluence_acdb_cal.acdb \
     vendor/xiaomi/dada/proprietary/odm/etc/acdbdata/Fluence/Fluence_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Fluence/Fluence_workspaceFileXml.qwsp \
@@ -35,10 +15,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/dada/proprietary/odm/etc/audio/misound_karaoke_res.bin:$(TARGET_COPY_OUT_ODM)/etc/audio/misound_karaoke_res.bin \
     vendor/xiaomi/dada/proprietary/odm/etc/audio/misound_karaokemix_res.bin:$(TARGET_COPY_OUT_ODM)/etc/audio/misound_karaokemix_res.bin \
     vendor/xiaomi/dada/proprietary/odm/etc/audio/misoundsa_spk_config.bin:$(TARGET_COPY_OUT_ODM)/etc/audio/misoundsa_spk_config.bin \
-    vendor/xiaomi/dada/proprietary/odm/etc/audio/sku_sun/mixer_paths_overlay_dynamic.xml:$(TARGET_COPY_OUT_ODM)/etc/audio/sku_sun/mixer_paths_overlay_dynamic.xml \
-    vendor/xiaomi/dada/proprietary/odm/etc/audio/sku_sun/mixer_paths_overlay_static.xml:$(TARGET_COPY_OUT_ODM)/etc/audio/sku_sun/mixer_paths_overlay_static.xml \
-    vendor/xiaomi/dada/proprietary/odm/etc/audio/sku_sun/mixer_paths_sun_mtp.xml:$(TARGET_COPY_OUT_ODM)/etc/audio/sku_sun/mixer_paths_sun_mtp.xml \
-    vendor/xiaomi/dada/proprietary/odm/etc/audio/sku_sun/resourcemanager_sun_mtp.xml:$(TARGET_COPY_OUT_ODM)/etc/audio/sku_sun/resourcemanager_sun_mtp.xml \
     vendor/xiaomi/dada/proprietary/odm/etc/camera/AIGesture/buling_1s.png:$(TARGET_COPY_OUT_ODM)/etc/camera/AIGesture/buling_1s.png \
     vendor/xiaomi/dada/proprietary/odm/etc/camera/AIGesture/buling_2s.png:$(TARGET_COPY_OUT_ODM)/etc/camera/AIGesture/buling_2s.png \
     vendor/xiaomi/dada/proprietary/odm/etc/camera/AIGesture/buling_3s.png:$(TARGET_COPY_OUT_ODM)/etc/camera/AIGesture/buling_3s.png \
@@ -1309,7 +1285,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/dada/proprietary/odm/etc/camera/xiaomismartaeconfig.json:$(TARGET_COPY_OUT_ODM)/etc/camera/xiaomismartaeconfig.json \
     vendor/xiaomi/dada/proprietary/odm/etc/camera/xmi_slmt_4x_1080p.dlc:$(TARGET_COPY_OUT_ODM)/etc/camera/xmi_slmt_4x_1080p.dlc \
     vendor/xiaomi/dada/proprietary/odm/etc/camera/xmi_slmt_4x_720p.dlc:$(TARGET_COPY_OUT_ODM)/etc/camera/xmi_slmt_4x_720p.dlc \
-    vendor/xiaomi/dada/proprietary/odm/etc/df_default.xml:$(TARGET_COPY_OUT_ODM)/etc/df_default.xml \
     vendor/xiaomi/dada/proprietary/odm/etc/disp0/mdss_dsi_o3_36_02_0b_dsc_cmd/cct_pcc.txt:$(TARGET_COPY_OUT_ODM)/etc/disp0/mdss_dsi_o3_36_02_0b_dsc_cmd/cct_pcc.txt \
     vendor/xiaomi/dada/proprietary/odm/etc/disp0/mdss_dsi_o3_36_02_0b_dsc_cmd/clstc/ClstcLut0.txt:$(TARGET_COPY_OUT_ODM)/etc/disp0/mdss_dsi_o3_36_02_0b_dsc_cmd/clstc/ClstcLut0.txt \
     vendor/xiaomi/dada/proprietary/odm/etc/disp0/mdss_dsi_o3_36_02_0b_dsc_cmd/clstc/ClstcLut1.txt:$(TARGET_COPY_OUT_ODM)/etc/disp0/mdss_dsi_o3_36_02_0b_dsc_cmd/clstc/ClstcLut1.txt \
@@ -1420,89 +1395,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/dada/proprietary/odm/etc/mdss_dsi_o3_36_02_0b_dsc_cmd_mi.xml:$(TARGET_COPY_OUT_ODM)/etc/mdss_dsi_o3_36_02_0b_dsc_cmd_mi.xml \
     vendor/xiaomi/dada/proprietary/odm/etc/mdss_dsi_o3_42_0d_0a_dsc_cmd_mi.xml:$(TARGET_COPY_OUT_ODM)/etc/mdss_dsi_o3_42_0d_0a_dsc_cmd_mi.xml \
     vendor/xiaomi/dada/proprietary/odm/etc/me_config.xml:$(TARGET_COPY_OUT_ODM)/etc/me_config.xml \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/5cm_blue.png:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/5cm_blue.png \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/5cm_gray.png:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/5cm_gray.png \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/5cm_green.png:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/5cm_green.png \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/5cm_red.png:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/5cm_red.png \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/5cm_white.png:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/5cm_white.png \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/ak7323.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/ak7323.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/ak991x_dri_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/ak991x_dri_0.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/center_cali_all.png:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/center_cali_all.png \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/center_cali_x.png:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/center_cali_x.png \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/center_cali_y.png:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/center_cali_y.png \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/chre_dynamic_sensors.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/chre_dynamic_sensors.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/json.lst:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/json.lst \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/lightSensorConfig.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/lightSensorConfig.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/lightSensorConfigSec.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/lightSensorConfigSec.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/pakala_ccd_base.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/pakala_ccd_base.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/qsh_camera_aon_front_i_1.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/qsh_camera_aon_front_i_1.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/qsh_camera_aon_front_ii_1.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/qsh_camera_aon_front_ii_1.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/qsh_camera_aon_rear_i_2.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/qsh_camera_aon_rear_i_2.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/qsh_camera_aon_rear_ii_2.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/qsh_camera_aon_rear_ii_2.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/qsh_camera_common.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/qsh_camera_common.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/qsh_camera_imx688_6.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/qsh_camera_imx688_6.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/qsh_camera_imx688_6_actuator.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/qsh_camera_imx688_6_actuator.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/qsh_camera_ov32c4c_4.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/qsh_camera_ov32c4c_4.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_ak7323.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_ak7323.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_ak991x_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_ak991x_0.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_bmi26x_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_bmi26x_0.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_bmp5_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_bmp5_0.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_default_sensors.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_default_sensors.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_dynamic_sensors.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_dynamic_sensors.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_dynamic_sensors_template.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_dynamic_sensors_template.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_irq.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_irq.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_lsm6dsv_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_lsm6dsv_0.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_power_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_power_0.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_spl07_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_spl07_0.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_sx937x_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_sx937x_0.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_tcs3408.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_tcs3408.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_tcs3720_fb.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_tcs3720_fb.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sm8750_vl53l1_tof_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sm8750_vl53l1_tof_0.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_amd.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_amd.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_aod.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_aod.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_aont.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_aont.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_ccd_v1_0_amd.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_ccd_v1_0_amd.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_ccd_v3_1_walk.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_ccd_v3_1_walk.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_ccd_v4_0_sensors.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_ccd_v4_0_sensors.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_ccd_v5_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_ccd_v5_0.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_ccd_v5_1_te_cd_regs.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_ccd_v5_1_te_cd_regs.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_ccd_v6_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_ccd_v6_0.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_ccd_v6_0_sensors.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_ccd_v6_0_sensors.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_ccd_v6_0_te_cd_regs.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_ccd_v6_0_te_cd_regs.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_cm.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_cm.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_collision_detection.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_collision_detection.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_dae.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_dae.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_dbtap.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_dbtap.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_device_orient.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_device_orient.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_diag_filter.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_diag_filter.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_direct_channel.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_direct_channel.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_distance_bound.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_distance_bound.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_dpc.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_dpc.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_flight_md.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_flight_md.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_fmv.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_fmv.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_gyro_cal.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_gyro_cal.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_gyro_cal_dynamic.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_gyro_cal_dynamic.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_healthy_use_of_mobile.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_healthy_use_of_mobile.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_mag_cal.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_mag_cal.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_nonui.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_nonui.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_oem_pocket.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_oem_pocket.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_offbody_detect_phone.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_offbody_detect_phone.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_pedometer.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_pedometer.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_pointing_light_source.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_pointing_light_source.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_rmd.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_rmd.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_rotv.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_rotv.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_sar_algo.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_sar_algo.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_sar_algo_1.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_sar_algo_1.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_screen_down.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_screen_down.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_smd.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_smd.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_tilt.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_tilt.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_tilt_to_wake.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_tilt_to_wake.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sns_transport_ppe.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sns_transport_ppe.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sx937x_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sx937x_0.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/sx937x_reg_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/sx937x_reg_0.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/tcs3408.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/tcs3408.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/vi5300_tof_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/vi5300_tof_0.json \
-    vendor/xiaomi/dada/proprietary/odm/etc/sensors/config/vl53l1_tof_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/config/vl53l1_tof_0.json \
     vendor/xiaomi/dada/proprietary/odm/etc/thermal-4k.conf:$(TARGET_COPY_OUT_ODM)/etc/thermal-4k.conf \
     vendor/xiaomi/dada/proprietary/odm/etc/thermal-arvr.conf:$(TARGET_COPY_OUT_ODM)/etc/thermal-arvr.conf \
     vendor/xiaomi/dada/proprietary/odm/etc/thermal-camera.conf:$(TARGET_COPY_OUT_ODM)/etc/thermal-camera.conf \
@@ -1591,12 +1483,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/dada/proprietary/odm/etc/touch/dynamicrate.json:$(TARGET_COPY_OUT_ODM)/etc/touch/dynamicrate.json \
     vendor/xiaomi/dada/proprietary/odm/etc/touch/gameturbotool-fastinput.json:$(TARGET_COPY_OUT_ODM)/etc/touch/gameturbotool-fastinput.json \
     vendor/xiaomi/dada/proprietary/odm/etc/touch/gameturbotool.json:$(TARGET_COPY_OUT_ODM)/etc/touch/gameturbotool.json \
-    vendor/xiaomi/dada/proprietary/odm/firmware/B-cs35l43-delta-music-spk-prot.bin:$(TARGET_COPY_OUT_ODM)/firmware/B-cs35l43-delta-music-spk-prot.bin \
-    vendor/xiaomi/dada/proprietary/odm/firmware/B-cs35l43-delta-voice-spk-prot.bin:$(TARGET_COPY_OUT_ODM)/firmware/B-cs35l43-delta-voice-spk-prot.bin \
-    vendor/xiaomi/dada/proprietary/odm/firmware/B-cs35l43-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_ODM)/firmware/B-cs35l43-dsp1-spk-prot.bin \
-    vendor/xiaomi/dada/proprietary/odm/firmware/T-cs35l43-delta-music-spk-prot.bin:$(TARGET_COPY_OUT_ODM)/firmware/T-cs35l43-delta-music-spk-prot.bin \
-    vendor/xiaomi/dada/proprietary/odm/firmware/T-cs35l43-delta-voice-spk-prot.bin:$(TARGET_COPY_OUT_ODM)/firmware/T-cs35l43-delta-voice-spk-prot.bin \
-    vendor/xiaomi/dada/proprietary/odm/firmware/T-cs35l43-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_ODM)/firmware/T-cs35l43-dsp1-spk-prot.bin \
     vendor/xiaomi/dada/proprietary/odm/firmware/cs35l43-dsp1-spk-prot.wmfw:$(TARGET_COPY_OUT_ODM)/firmware/cs35l43-dsp1-spk-prot.wmfw \
     vendor/xiaomi/dada/proprietary/odm/firmware/dada_ofilm_s5kjn5_bu24619_tele3x_ii_ois_bmi26x.coeff:$(TARGET_COPY_OUT_ODM)/firmware/dada_ofilm_s5kjn5_bu24619_tele3x_ii_ois_bmi26x.coeff \
     vendor/xiaomi/dada/proprietary/odm/firmware/dada_ofilm_s5kjn5_bu24619_tele3x_ii_ois_bmi26x.mem:$(TARGET_COPY_OUT_ODM)/firmware/dada_ofilm_s5kjn5_bu24619_tele3x_ii_ois_bmi26x.mem \
@@ -1835,15 +1721,14 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/dada/proprietary/odm/lib64/qsn3all.bin:$(TARGET_COPY_OUT_ODM)/lib64/qsn3all.bin \
     vendor/xiaomi/dada/proprietary/odm/vendor/etc/videoCodecCapability.json:$(TARGET_COPY_OUT_ODM)/vendor/etc/videoCodecCapability.json \
     vendor/xiaomi/dada/proprietary/odm/vendor/etc/videobox.json:$(TARGET_COPY_OUT_ODM)/vendor/etc/videobox.json \
+    vendor/xiaomi/dada/proprietary/product/etc/displayconfig/common_multi_factor_thermal_brightness_control.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/common_multi_factor_thermal_brightness_control.xml \
+    vendor/xiaomi/dada/proprietary/product/etc/displayconfig/display_id_4630946682710401939.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/display_id_4630946682710401939.xml \
+    vendor/xiaomi/dada/proprietary/product/etc/displayconfig/display_id_4630947212918452371.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/display_id_4630947212918452371.xml \
+    vendor/xiaomi/dada/proprietary/product/etc/displayconfig/multi_factor_thermal_brightness_control.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/multi_factor_thermal_brightness_control.xml \
+    vendor/xiaomi/dada/proprietary/product/etc/displayconfig/rhythmic_app_category_list_backup.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/rhythmic_app_category_list_backup.xml \
     vendor/xiaomi/dada/proprietary/vendor/etc/camera/cameraopt_perf.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cameraopt_perf.json \
-    vendor/xiaomi/dada/proprietary/vendor/etc/camera/cameraopt_vendor.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cameraopt_vendor.json
-
-# Stock gralloc prebuilts for camera HAL compatibility
-PRODUCT_PACKAGES += \
-    libgralloccore \
-    libgrallocutils \
-    libgralloc.qti \
-    vendor.qti.hardware.display.allocator-service
+    vendor/xiaomi/dada/proprietary/vendor/etc/camera/cameraopt_vendor.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cameraopt_vendor.json \
+    vendor/xiaomi/dada/proprietary/vendor/etc/displayconfig/display_layout_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_layout_configuration.xml
 
 PRODUCT_PACKAGES += \
     libSNPESample \
@@ -1856,11 +1741,9 @@ PRODUCT_PACKAGES += \
     libopencv_core_se \
     libopencv_imgproc \
     libopencv_imgproc_se \
+    libultrahdr_dada \
     libVppAisQnnHtp \
     libVppFrcQnnHtp \
-    libapn_dsp_skel \
-    libhdr_skel \
-    libqsegnetengine_dsp_skel \
     libdpp_engine_skel \
     libdspCV_skel \
     libevadsp \
@@ -2176,6 +2059,8 @@ PRODUCT_PACKAGES += \
     camera.qcom \
     com.qti.chi.offline \
     com.qti.chi.override \
+    fingerprint.goodix_us \
+    fingerprint.qcom_us \
     immunesystem.db.sqlite3 \
     libAF \
     libAncHumanPreviewBokeh \
@@ -2217,9 +2102,6 @@ PRODUCT_PACKAGES += \
     libarcsoft_turbo_hdr_raw_portrait \
     libbitmlengine \
     libbitmlenginev2 \
-    libbitml_nsp_73na_skel \
-    libbitml_nsp_79na_skel \
-    libbitml_nsp_skel \
     libc++_shared \
     libcalculator \
     libcamera_scene \
@@ -2272,6 +2154,7 @@ PRODUCT_PACKAGES += \
     libellv \
     libfastmessage \
     libfuai_camera_alg \
+    libgf_hal \
     libhandgesture.arcsoft \
     libhdr10plus \
     libheichal \
@@ -2347,7 +2230,6 @@ PRODUCT_PACKAGES += \
     libmmcamera_mfnr_t4 \
     libmmcamera_pdpc \
     libmmfp \
-    libgf_hal \
     libmorpho_Depurple \
     libmpbase \
     libocr_api \
@@ -2385,6 +2267,12 @@ PRODUCT_PACKAGES += \
     libvideoml \
     libwa_widelens_undistort \
     libxmi_slow_motion_mein \
+    libapn_dsp_skel \
+    libbitml_nsp_73na_skel \
+    libbitml_nsp_79na_skel \
+    libbitml_nsp_skel \
+    libhdr_skel \
+    libqsegnetengine_dsp_skel \
     vendor.qti.hardware.camera.aon-service-impl \
     vendor.qti.hardware.camera.offlinecamera-service-impl \
     vendor.xiaomi.hardware.aidl.intentaware-V1-impl \
